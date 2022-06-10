@@ -48,3 +48,25 @@ pixel_adding_config = {
 resp_third = requests.post(
     url=pixel_endpoint, json=pixel_adding_config, headers=headers)
 print(resp_third.text)
+
+
+UPDATE_DATE = 20220608
+update_endpoint = f"{pixel_endpoint}/{UPDATE_DATE}"
+
+# NOTE: UPDATE PIXEL
+new_piexldata = {
+    "quantity": "3"
+}
+
+# RUN WHEN YOU NEED UPDATE
+# resp_forth = requests.put(
+#     url=update_endpoint, json=new_piexldata, headers=headers)
+
+# print(resp_forth.text)
+
+# NOTE: DELETE PIXEL
+
+# resp_fifth = requests.delete(
+#     url=update_endpoint, headers=headers)
+
+# print(resp_fifth.text)
